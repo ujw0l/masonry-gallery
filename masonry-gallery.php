@@ -1,6 +1,6 @@
 <?php
 /*
- Plugin Name:Masonry Gallery
+ Plugin Name:CTC Gallery
  Plugin URI:https://github.com/ujw0l/masonry-gallery
  Description: Masonry Image Gallery for WordPress
  Version: 1.0.0

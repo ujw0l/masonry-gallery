@@ -1,4 +1,4 @@
-=== Masonry Gallery ===
+=== CTC Gallery ===
 Contributors: UjW0L
 Tags: Gallery, masonry, overlay, image album
 Requires at least: 5.7.2
