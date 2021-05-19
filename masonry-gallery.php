@@ -6,17 +6,17 @@
  Version: 1.0.0
  Author: Ujwol Bastakoti
  Author URI:https://ujw0l.github.io/
- Text Domain:  mas-gal
+ Text Domain:  ctc-gal
  License: GPLv2
 */
 
 
-class masGal{
+class ctcgGal{
 
 
 public function __construct(){
 
-    define('MG_DIR_PATH',plugin_dir_url(__FILE__));
+    define('CTCG_DIR_PATH',plugin_dir_url(__FILE__));
     self::masGalRequiredWpAtion();
 }
 
@@ -28,9 +28,9 @@ public function __construct(){
    */
 
   public function enequeFrontendJs(){
-    wp_enqueue_script('mgJsMasonry', MG_DIR_PATH.'js/js-masonry.js');
-    wp_enqueue_script('mgJsOverlay', MG_DIR_PATH.'js/js-overlay.js');
-    wp_enqueue_script('masGal', MG_DIR_PATH.'js/mas-gal.js',array('mgJsMasonry','mgJsOverlay'));
+    wp_enqueue_script('mgJsMasonry', CTCG_DIR_PATH.'js/js-masonry.js');
+    wp_enqueue_script('mgJsOverlay', CTCG_DIR_PATH.'js/js-overlay.js');
+    wp_enqueue_script('masGal', CTCG_DIR_PATH.'js/mas-gal.js',array('mgJsMasonry','mgJsOverlay'));
   }
 
      /**
@@ -40,7 +40,7 @@ public function __construct(){
    */
 
   public function enequeAdminJs(){
-    wp_enqueue_script('mgJsMasonry', MG_DIR_PATH.'js/js-masonry.js',array());
+    wp_enqueue_script('mgJsMasonry', CTCG_DIR_PATH.'js/js-masonry.js',array());
 
   }
 /**
@@ -87,4 +87,4 @@ wp_register_script(
 
 }
 
-new masGal();
+new ctcgGal();
