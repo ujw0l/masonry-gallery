@@ -5,8 +5,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const overlay = new jsOverlay();
     overlay.createOverlay({
         imgGallery: '.mas-gal-gallery',
-        containerHt: 1000,
-        containerWd: 1500,
+        containerHt: 700,
+        containerWd: 900,
     })
 
     document.querySelector('body').style.overflow = '';
