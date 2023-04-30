@@ -25,28 +25,32 @@ wp.blocks.registerBlockType('masonry-gallery/ctc-gal-block', {
         timeStamp: {
             type: 'string', default: Date.now()
         },
-        brkWidth: { type: Number, default: 48 },
-        gallery: { type: Array, default: [] },
-        mediaIds: { type: Array, default: [] },
+        brkWidth: { type: "Number", default: 48 },
+        gallery: { type: "Array", default: [] },
+        mediaIds: { type: "Array", default: [] },
+        gutWidth:{type:"Number", default:15},
+        clntId :{type:"String", default:""}
     },
     example: {
 
     },
     edit: props => {
         useEffect(() => {
+
+            props.setAttributes({clntId:props.clientId})
             let Ids = Array;
             if (props.attributes.gallery.length >= 1) {
 
                 Array.from(document.querySelectorAll(`.mas-img-${props.attributes.timeStamp}`)).map(x => x.style.width = '');
 
-                jsMas.prepMas(`#mas-div-${props.attributes.timeStamp}`, { percentWidth: true });
-                setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
+                jsMas.prepMas(`#mas-div-${props.attributes.timeStamp}`, { percentWidth: true,  elMargin:props.attributes.gutWidth });
+                setTimeout(() => window.dispatchEvent(new Event('resize')), 300);
 
                 Ids = props.attributes.gallery.map(x => x.id);
                 props.setAttributes({ mediaIds: Ids })
             }
 
-        }, [props.attributes.gallery, props.attributes.brkWidth]);
+        }, [props.attributes.gallery, props.attributes.brkWidth,props.attributes.gutWidth]);
 
 
         return mgEl('div', null, mgEl('div', {},),
@@ -74,10 +78,24 @@ wp.blocks.registerBlockType('masonry-gallery/ctc-gal-block', {
                     onChange: val => props.setAttributes({ brkWidth: val }),
                     value: props.attributes.brkWidth,
                     resetFallbackValue: 30
-                }))))
+                }),
+              mgEl(RangeControl,{
+                
+                label: __('Gutter Width', 'ctc-gal'),
+                    min: 1,
+                    max: 50,
+                    onChange: val => props.setAttributes({ gutWidth: val }),
+                    value: props.attributes.gutWidth,
+                    resetFallbackValue: 0
+
+              }),
+                
+                )),
+            
+                )
     },
     save: props => mgEl('div', null,
-        mgEl('div', { style: { opacity: '0' }, className: 'mas-gal-gallery' }, props.attributes.gallery.map(x => mgEl('img', { 'width': `${props.attributes.brkWidth}% `, 'title': x.caption, src: x.url })
+        mgEl('div',  { style: { opacity: '0' }, id:`mas-gal-${props.clientId}`, "data-gut-wd":props.attributes.gutWidth, className: 'mas-gal-gallery' }, props.attributes.gallery.map(x => mgEl('img', { 'width': `${props.attributes.brkWidth}% `, 'title': x.caption, src: x.url })
         )
         ))
 

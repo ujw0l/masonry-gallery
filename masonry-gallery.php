@@ -3,7 +3,7 @@
  Plugin Name:CTC Gallery
  Plugin URI:https://github.com/ujw0l/masonry-gallery
  Description: Masonry Image Gallery for WordPress
- Version: 1.0.0
+ Version: 2.0.0
  Author: Ujwol Bastakoti
  Author URI:https://ujw0l.github.io/
  Text Domain:  ctc-gal
@@ -29,8 +29,8 @@ public function __construct(){
 
   public function enequeFrontendJs(){
     wp_enqueue_script('mgJsMasonry', CTCG_DIR_PATH.'js/js-masonry.js');
-    wp_enqueue_script('mgJsOverlay', CTCG_DIR_PATH.'js/js-overlay.js');
-    wp_enqueue_script('masGal', CTCG_DIR_PATH.'js/mas-gal.js',array('mgJsMasonry','mgJsOverlay'));
+    wp_enqueue_script('mgCtcOverlay', CTCG_DIR_PATH.'js/ctc_overlay.js');
+    wp_enqueue_script('masGal', CTCG_DIR_PATH.'js/mas-gal.js',array('mgJsMasonry','mgCtcOverlay'));
   }
 
      /**

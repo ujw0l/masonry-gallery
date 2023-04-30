@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/ujw0l/masonry-gallery#readme",
   "dependencies": {
-    "js-overlay": "^1.0.9",
+    "ctc-gallery-viewer": "^1.6.0",
     "js-masonry": "^1.1.0"
   }
 }

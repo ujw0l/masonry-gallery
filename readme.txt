@@ -1,10 +1,11 @@
 === CTC Gallery ===
 Contributors: UjW0L
+Donate link: https://www.patreon.com/ujw0l/membership
 Tags: Gallery, masonry, overlay, image album
 Requires at least: 5.7.2
-Tested up to: 5.7.2
+Tested up to: 6.2
 Requires PHP: 7.4.9
-Stable tag: 1.0.0
+Stable tag: 2.0.0
 License: GPL V2
 
 WordPress plugin to create masonry image gallery
@@ -22,7 +23,7 @@ e.g.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. Go to Post screen look for Masonry gallery block on gutenberg section
 4. Add the block
-5. Adjust image size with Range control on block setting  
+5. Adjust Image size and Gutter width with Range control on block setting  
 
 == Screenshots ==
 1. Gutenberg Block
@@ -35,3 +36,7 @@ e.g.
 
 =1.0.0=
 *First Stable version
+
+=2.0.0=
+*CTC Overlay viewer added
+*Gutter width option added
