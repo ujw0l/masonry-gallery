@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "masonry-gallery/ctc-gal-block",
+  "version": "2.5.0",
+  "title": "CTC Masonry Gallery ",
+  "category": "media",
+  "icon": "format-gallery",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "ctc-gal",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:/frontend.js"
+}

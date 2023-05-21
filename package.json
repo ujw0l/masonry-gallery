@@ -1,29 +1,24 @@
 {
-  "name": "ctc-gallery",
-  "version": "1.0.0",
-  "description": "CTC Gallery WordPress plugin",
-  "main": "js-masonry.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ujw0l/masonry-gallery.git"
-  },
-  "keywords": [
-    "Masonry",
-    "gallery",
-    "Wordpress-plugin",
-    "gutenberg-block"
-  ],
-  "author": "UjW0L",
-  "license": "GPL-2.0-or-later",
-  "bugs": {
-    "url": "https://github.com/ujw0l/masonry-gallery/issues"
-  },
-  "homepage": "https://github.com/ujw0l/masonry-gallery#readme",
-  "dependencies": {
-    "ctc-gallery-viewer": "^1.6.0",
-    "js-masonry": "^1.1.0"
-  }
+	"name": "ctc-gal-block",
+	"version": "2.5.0",
+	"description": "Gutenberg block to create masonry image gallery",
+	"author": "UjW0L",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.4.0"
+	},
+	"dependencies": {
+		"ctc-gallery-viewer": "^1.6.0",
+		"js-masonry": "^1.1.0"
+	}
 }
