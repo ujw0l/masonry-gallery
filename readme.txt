@@ -43,5 +43,6 @@ e.g.
 
 =2.5.0=
 *JSX Support for Development
+*Minified version of JavaScript
 
 
