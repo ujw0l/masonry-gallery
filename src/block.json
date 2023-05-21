@@ -5,8 +5,8 @@
 	"version": "2.5.0",
 	"title": "CTC Masonry Gallery ",
 	"category": "media",
-	"icon": "format-gallery",
-	"description": "Example block scaffolded with Create Block tool.",
+	"icon": "layout",
+	"description": "Create a Masonry Image gallery",
 	"example": {},
 	"supports": {
 		"html": false
