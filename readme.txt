@@ -5,7 +5,7 @@ Tags: Gallery, masonry, overlay, image album
 Requires at least: 5.7.2
 Tested up to: 6.2.1
 Requires PHP: 7.4.9
-Stable tag: 2.5.0
+Stable tag: 2.5.1
 License: GPL V2
 
 WordPress plugin to create masonry image gallery
@@ -44,5 +44,8 @@ e.g.
 =2.5.0=
 *JSX Support for Development
 *Minified version of JavaScript
+
+=2.5.1=
+*Minor bux fixes
 
 

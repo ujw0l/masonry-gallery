@@ -43,8 +43,6 @@ export default function Edit({clientId,attributes,setAttributes}) {
 		let Ids = Array();
 		if (attributes.gallery.length >= 1) {
 
-			Array.from(document.querySelectorAll(`.mas-img-${attributes.clntId}`)).map(x => x.style.width = '');
-
 			new jsMasonry(`#mas-div-${attributes.clntId}`, { percentWidth: true,  elMargin:attributes.gutWidth });
 			setTimeout(() => window.dispatchEvent(new Event('resize')), 300);
 
@@ -58,7 +56,7 @@ export default function Edit({clientId,attributes,setAttributes}) {
 			
 			{0 < attributes.gallery.length && <div className= 'ctc-gal-gallery' id= {`mas-div-${attributes.clntId}` } > 
 			{
-			    attributes.gallery.map((x,i)=><img   key={i} className={ `mas-img-${attributes.clntId}`} width= {`${attributes.brkWidth}% `} title={ x.caption} src= {x.url}  /> )
+			    attributes.gallery.map((x,i)=><img   key={i} className={ `mas-img-${attributes.clntId}`} style={ {width: `${attributes.brkWidth}%`} } title={ x.caption} src= {x.url}  /> )
 			}
 			</div> 
 			}
