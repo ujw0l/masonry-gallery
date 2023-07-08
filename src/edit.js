@@ -1,5 +1,5 @@
-import {useEffect} from 'react';
-import { CheckboxControl, PanelBody, Button, RangeControl, } from '@wordpress/components';
+import {useEffect,useRef} from 'react';
+import { ToggleControl,PanelBody, Button, RangeControl,ColorPicker } from '@wordpress/components';
 import { jsMasonry } from 'js-masonry';
 
 /**
@@ -36,6 +36,7 @@ import './editor.scss';
 export default function Edit({clientId,attributes,setAttributes}) {
 
 
+	const mainCont = useRef();
 
 	useEffect(() => {
 
@@ -51,12 +52,62 @@ export default function Edit({clientId,attributes,setAttributes}) {
 		}
 
 	}, [attributes.gallery, attributes.brkWidth,attributes.gutWidth]);
+
+
+/*
+	useEffect(()=>{
+
+		if(attributes.zoomOnHover){
+
+
+			Array.from(mainCont.current.querySelectorAll('img')).map(x=>{
+
+				x.addEventListener('mouseleave', e => {
+
+
+					e.target.style.position='relative';
+					e.target.style.zIndex = '';
+					e.target.display='inline-block';
+					e.target.style.width = e.target.getAttribute('data-mas-wd') + 'px';
+					e.target.style.height = e.target.getAttribute('data-mas-ht') + 'px';
+					e.target.style.left = e.target.getAttribute('data-mas-left') + 'px';
+					e.target.style.top = e.target.getAttribute('data-mas-top') + 'px';
+				});
+				x.addEventListener('mouseover', e => {
+	
+			
+					let htWtRatio = e.target.offsetHeight / e.target.offsetWidth;
+
+					e.target.style.zIndex = '500';
+					e.target.style.position='absolute';
+					e.target.style.display = 'block';
+					if (null == e.target.getAttribute('data-mas-ht') && null == e.target.getAttribute('data-mas-wd')) {
+						e.target.setAttribute('data-mas-ht', e.target.offsetHeight);
+						e.target.setAttribute('data-mas-wd', e.target.offsetWidth);
+						e.target.setAttribute('data-mas-left', e.target.style.left);
+						e.target.setAttribute('data-mas-top', e.target.style.top);
+					}
+	
+					e.target.style.width = mainCont.current.offsetWidth + 'px';
+					e.target.style.height = (mainCont.current.offsetWidth * htWtRatio) + 'px';
+				});
+
+			})
+
+		}
+
+
+	},[attributes.zoomOnHover])
+	*/
+
+
+
 	return (
 		<div { ...useBlockProps() }>
 			
-			{0 < attributes.gallery.length && <div className= 'ctc-gal-gallery' id= {`mas-div-${attributes.clntId}` } > 
+			{0 < attributes.gallery.length && <div className= 'ctc-gal-gallery' ref={mainCont} id= {`mas-div-${attributes.clntId}` } > 
 			{
-			    attributes.gallery.map((x,i)=><img   key={i} className={ `mas-img-${attributes.clntId}`} style={ {width: `${attributes.brkWidth}%`} } title={ x.caption} src= {x.url}  /> )
+			    attributes.gallery.map((x,i)=><img   key={i} className={ `mas-img-${attributes.clntId} ${attributes.zoomOnHoverClass}`} style={ {width: `${attributes.brkWidth}%`, boxShadow:`${attributes.boxShadWd}px ${attributes.boxShadWd}px ${attributes.boxShadWd/2}px ${attributes.shadowCol}` } } title={ x.caption} src= {x.url}  /> )
 			}
 			</div> 
 			}
@@ -75,7 +126,7 @@ export default function Edit({clientId,attributes,setAttributes}) {
 
 							<div  style= {{ width: '100%', backgroundColor: 'rgba(255,255,,255,1)', color: 'rgb(61, 148, 218)', padding: '10px' }}>
 							<h5 className= 'dashicons-before dashicons-format-gallery'>{__('CTC Gallery','ctc-gal')}</h5>
-							<Button style={{ marginLeft: 'auto', marginRight: 'auto', display: 'block', color: 'rgb(61, 148, 218)', border: '1px solid rgb(61, 148, 218)'}} className= {"ctc-gal-button dashicons-before dashicons-format-gallery"}  onClick={open}>{__(" Select Images", "ctc-gal")}</Button>
+							<Button style={{ marginLeft: 'auto', marginRight: 'auto', display: 'block', color: 'rgb(61, 148, 218)', border: '1px solid rgb(61, 148, 218)'}} className= {"ctc-gal-button dashicons-before dashicons-format-gallery"}  onClick={open}>{  attributes.gallery.length > 1 ?  __(" Edit Gallery", "ctc-gal")  : __(" Select Images", "ctc-gal")}</Button>
 						</div>
 						)}
 					/>
@@ -105,10 +156,77 @@ export default function Edit({clientId,attributes,setAttributes}) {
                     onChange = {val => setAttributes({ gutWidth: val })}
                     value = {attributes.gutWidth}
                     resetFallbackValue = {0}
-					
 					/>
 
+			<ToggleControl
+			label={__("Enlarge Images on Hover?", "ctc-gal")}
+			checked={attributes.zoomOnHover}
+			onChange={val=> { 
+				if(val){
+					setAttributes({zoomOnHoverClass:'ctc-gal-zoom-on-hover'  });
+					setAttributes({activateOverlay:false});
+					setAttributes({overlayClass:''});
+				}else{ setAttributes({zoomOnHoverClass:''  }) }
+				setAttributes({zoomOnHover:val}) 
+		}}				
+			
+			/>		
+
+			<ToggleControl
+			label={__("Show Images on Overlay?", "ctc-gal")}
+			checked={attributes.activateOverlay}
+			onChange={val=>{
+				if(val){
+					setAttributes({overlayClass:'ctc-gal-overlay'});
+					setAttributes({zoomOnHover:false});
+					setAttributes({zoomOnHoverClass:''  });
+				}else{setAttributes({overlayClass:''}) }
+				
+				setAttributes({activateOverlay:val})
+		}}				
+			/>	
+</PanelBody>
+<PanelBody>
+				<ToggleControl
+				label={__("Add Shadow Effect to images?","ctc-gal")}
+				checked={attributes.addShadEff}
+				onChange={val=>  {
+
+                    if(!val){
+						setAttributes({shadowCol:''});
+						setAttributes({boxShadWd:0});
+						
+					}
+					setAttributes({addShadEff:val})
+				} }
+				/>
+{
+				attributes.addShadEff && <> <RangeControl
+				
+				label={__("Shadow Margin","ctc-gal")}
+				min = {0}
+				max = {50}
+				value =  {attributes.boxShadWd}
+				onChange={val=>setAttributes({boxShadWd:val})}
+				resetFallback
+				Value={0}				
+				/>
+			
+			<label>{__("Shadow Color","ctc-gal").toUpperCase()}</label>
+               <ColorPicker
+			   	color={attributes.shadowCol}
+            	onChange={val=>setAttributes({shadowCol:val})}
+            	enableAlpha
+            	defaultValue=""
+			/>
+			
+</>
+
+}
+
 				</PanelBody>
+
+			
 
 				</InspectorControls>
 

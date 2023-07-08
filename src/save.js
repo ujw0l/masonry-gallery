@@ -18,9 +18,9 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function save({attributes}) {
 	return (
 		<div { ...useBlockProps.save() }>
-			{0 < attributes.gallery.length && <div style={{opacity:'0'}} data-gut-wd={attributes. gutWidth} className= 'mas-gal-gallery' id= {`mas-div-${attributes.clntId}` } > 
+			{0 < attributes.gallery.length && <div style={{opacity:'0'}} data-gut-wd={attributes. gutWidth} className= {`mas-gal-gallery ${attributes.overlayClass}`} id= {`mas-div-${attributes.clntId}` } > 
 			{
-			    attributes.gallery.map((x,i)=><img   key={i} className={ `mas-img-${attributes.clntId}`} style={ {width : `${attributes.brkWidth}% `} } title={ x.caption} src= {x.url}  /> )
+			    attributes.gallery.map((x,i)=><img   key={i} className={ `mas-img-${attributes.clntId} ${attributes.zoomOnHoverClass}`} style={ { boxShadow:`${attributes.boxShadWd}px ${attributes.boxShadWd}px ${attributes.boxShadWd/2}px ${attributes.shadowCol}`, width : `${attributes.brkWidth}% `} } title={ x.caption} src= {x.url}  /> )
 			}
 			</div> 
 			}

@@ -1,17 +1,17 @@
 === CTC Gallery ===
 Contributors: UjW0L
 Donate link: https://www.patreon.com/ujw0l/membership
-Tags: Gallery, masonry, overlay, image album
+Tags: block, gallery, masonry, overlay, image-album
 Requires at least: 5.7.2
-Tested up to: 6.2.1
+Tested up to: 6.2.2
 Requires PHP: 7.4.9
-Stable tag: 2.5.1
+Stable tag: 2.6.0
 License: GPL V2
 
 WordPress plugin to create masonry image gallery
 
 == Description ==
-Plugins lets you create a Masonry Image gallery with Gutenberg Block. And view image in modal window. 
+Plugins lets you create a Masonry Image gallery with Gutenberg Block. And view image in modal window. Now with ability to apply box shadow effect and zoom to the image, 
 
 == Installation ==
 
@@ -47,5 +47,11 @@ e.g.
 
 =2.5.1=
 *Minor bux fixes
+
+=2.6.0=
+*Image box shadow background effect
+*Optional image enlarge on hover
+*Optional display images galley in overlay 
+
 
 
