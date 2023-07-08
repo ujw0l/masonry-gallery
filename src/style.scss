@@ -10,3 +10,24 @@
 	color: #fff;
 	padding: 2px;
 }
+
+
+@keyframes zoomOnHover {
+	from {
+		transform: scale(1,1);
+		
+	}
+	to {
+		transform: scale(2,2);
+		
+	}
+  }
+
+img.ctc-gal-zoom-on-hover:hover{
+ 
+	position: absolute;
+	z-index: 500000;
+	transition: width 1.5s, height 1.5s;
+	animation: zoomOnHover 1.5s linear;
+	transform: scale(2,2);
+  }

@@ -35,14 +35,21 @@ import metadata from './block.json';
  */
 registerBlockType( metadata.name, {
 
-	keywords: [__('Masonry galllery', 'ctc-gal'), __('masonry gallery', 'ctc-gal')],
+	keywords: [__('Masonry galllery', 'ctc-gal'), __('masonry gallery', 'ctc-gal'), __("Gallery",'ctc-gal')],
 	
 	attributes: {
 		        brkWidth: { type: "Number", default: 48 },
 		        gallery: { type: "Array", default: [] },
 		        mediaIds: { type: "Array", default: [] },
 		        gutWidth:{type:"Number", default:15},
-		        clntId :{type:"String", default:""}
+		        clntId :{type:"String", default:""},
+				addShadEff:{type:'Boolean', default:false},
+				shadowCol:{type:"String", default:''},
+				boxShadWd:{type:"Number", default:0},
+				zoomOnHoverClass:{type:'String',default:'ctc-gal-zoom-on-hover'},
+				overlayClass:{type:'String', default:''},
+				zoomOnHover:{type:"Boolean", default:true},
+				activateOverlay:{type:"Boolean",default:false} 
 		    },
 	/**
 	 * @see ./edit.js

@@ -6,7 +6,7 @@
 	"title": "CTC Masonry Gallery ",
 	"category": "media",
 	"icon": "layout",
-	"description": "Create a Masonry Image gallery",
+	"description": "Create a Masonry Image gallery with Gutenberg block",
 	"example": {},
 	"supports": {
 		"html": false

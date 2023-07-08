@@ -1,1 +1,32 @@
-.wp-block-create-block-ctc-gal-block{background-color:#21759b;color:#fff;padding:2px}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-ctc-gal-block {
+  background-color: #21759b;
+  color: #fff;
+  padding: 2px;
+}
+
+@keyframes zoomOnHover {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(2, 2);
+  }
+}
+img.ctc-gal-zoom-on-hover:hover {
+  position: absolute;
+  z-index: 500000;
+  transition: width 1.5s, height 1.5s;
+  animation: zoomOnHover 1.5s linear;
+  transform: scale(2, 2);
+}
+
+/*# sourceMappingURL=style-index.css.map*/
