@@ -35,7 +35,7 @@ import metadata from './block.json';
  */
 registerBlockType( metadata.name, {
 
-	keywords: [__('Masonry galllery', 'ctc-gal'), __('masonry gallery', 'ctc-gal'), __("Gallery",'ctc-gal')],
+	keywords: [__('Masonry galllery', 'ctc-gal'), __('masonry gallery', 'ctc-gal'), __("Gallery",'ctc-gal'), __("Collage",'ctc-gal')],
 	
 	attributes: {
 		        brkWidth: { type: "Number", default: 48 },
