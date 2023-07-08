@@ -11,7 +11,7 @@ License: GPL V2
 WordPress plugin to create masonry image gallery
 
 == Description ==
-Plugins lets you create a Masonry Image gallery with Gutenberg Block. And view image in modal window. 
+Plugins lets you create a Masonry Image gallery with Gutenberg Block. And view image in modal window. Now with ability to apply box shadow effect and zoom to the image, 
 
 == Installation ==
 
