@@ -54,54 +54,6 @@ export default function Edit({clientId,attributes,setAttributes}) {
 	}, [attributes.gallery, attributes.brkWidth,attributes.gutWidth]);
 
 
-/*
-	useEffect(()=>{
-
-		if(attributes.zoomOnHover){
-
-
-			Array.from(mainCont.current.querySelectorAll('img')).map(x=>{
-
-				x.addEventListener('mouseleave', e => {
-
-
-					e.target.style.position='relative';
-					e.target.style.zIndex = '';
-					e.target.display='inline-block';
-					e.target.style.width = e.target.getAttribute('data-mas-wd') + 'px';
-					e.target.style.height = e.target.getAttribute('data-mas-ht') + 'px';
-					e.target.style.left = e.target.getAttribute('data-mas-left') + 'px';
-					e.target.style.top = e.target.getAttribute('data-mas-top') + 'px';
-				});
-				x.addEventListener('mouseover', e => {
-	
-			
-					let htWtRatio = e.target.offsetHeight / e.target.offsetWidth;
-
-					e.target.style.zIndex = '500';
-					e.target.style.position='absolute';
-					e.target.style.display = 'block';
-					if (null == e.target.getAttribute('data-mas-ht') && null == e.target.getAttribute('data-mas-wd')) {
-						e.target.setAttribute('data-mas-ht', e.target.offsetHeight);
-						e.target.setAttribute('data-mas-wd', e.target.offsetWidth);
-						e.target.setAttribute('data-mas-left', e.target.style.left);
-						e.target.setAttribute('data-mas-top', e.target.style.top);
-					}
-	
-					e.target.style.width = mainCont.current.offsetWidth + 'px';
-					e.target.style.height = (mainCont.current.offsetWidth * htWtRatio) + 'px';
-				});
-
-			})
-
-		}
-
-
-	},[attributes.zoomOnHover])
-	*/
-
-
-
 	return (
 		<div { ...useBlockProps() }>
 			
@@ -159,7 +111,7 @@ export default function Edit({clientId,attributes,setAttributes}) {
 					/>
 
 			<ToggleControl
-			label={__("Enlarge Images on Hover?", "ctc-gal")}
+			label={__("Enlarge Images on Hover", "ctc-gal")}
 			checked={attributes.zoomOnHover}
 			onChange={val=> { 
 				if(val){
@@ -173,7 +125,7 @@ export default function Edit({clientId,attributes,setAttributes}) {
 			/>		
 
 			<ToggleControl
-			label={__("Show Images on Overlay?", "ctc-gal")}
+			label={__("Show Images on Overlay", "ctc-gal")}
 			checked={attributes.activateOverlay}
 			onChange={val=>{
 				if(val){
@@ -225,8 +177,6 @@ export default function Edit({clientId,attributes,setAttributes}) {
 }
 
 				</PanelBody>
-
-			
 
 				</InspectorControls>
 

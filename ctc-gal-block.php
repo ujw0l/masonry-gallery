@@ -4,7 +4,7 @@
  *Plugin Name:CTC Gallery
  *Plugin URI:https://github.com/ujw0l/masonry-gallery
  *Description: Masonry image gallery Gutenberg block for WordPress
- *Version: 2.6.0
+ *Version: 2.7.0
  *Author: Ujwol Bastakoti
  *Author URI:https://ujw0l.github.io/
  *Text Domain:  ctc-gal
