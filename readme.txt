@@ -3,9 +3,9 @@ Contributors: UjW0L
 Donate link: https://www.patreon.com/ujw0l/membership
 Tags: block, gallery, masonry, overlay, image-album
 Requires at least: 5.7.2
-Tested up to: 6.4.1
+Tested up to: 6.5
 Requires PHP: 7.4.9
-Stable tag: 2.6.0
+Stable tag: 2.7.0
 License: GPL V2
 
 WordPress plugin to create masonry image gallery
@@ -53,5 +53,5 @@ e.g.
 *Optional image enlarge on hover
 *Optional display images galley in overlay 
 
-
-
+=2.7.0=
+*Display gallery on Image load
