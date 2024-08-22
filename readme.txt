@@ -13,12 +13,12 @@ WordPress plugin to create masonry image gallery
 == Description ==
 Plugins lets you create a Masonry Image gallery with Gutenberg Block. And view image in modal window. Now with ability to apply box shadow effect and zoom to the image, 
 
-	### What's Next
-	Checkout out my other projects for WordPress 
+### What's Next
+Checkout out my other projects for WordPress 
 	
-	[Carousel Block](https://5973410813512.gumroad.com/l/lwducfe) - Create Image carousel With Block
+[Carousel Block](https://5973410813512.gumroad.com/l/lwducfe) - Create Image carousel With Block
 	
-	[CT Commerce Lite](https://wordpress.org/plugins/ctc-lite/) - Block based ecommerce plugin
+[CT Commerce Lite](https://wordpress.org/plugins/ctc-lite/) - Block based ecommerce plugin
 
 
 == Installation ==
