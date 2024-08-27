@@ -1,7 +1,7 @@
 # CTC Masonry Gallery 🎨
 
 **Contributors:** UjW0L  
-**Donate link:** [Support the Plugin 🙏](https://www.patreon.com/ujw0l/membership)  
+**Donate link:** https://www.patreon.com/ujw0l/membership 
 **Tags:** block, gallery, masonry, overlay, image-album  
 **Requires at least:** 5.7.2  
 **Tested up to:** 6.6  
