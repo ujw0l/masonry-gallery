@@ -1,4 +1,4 @@
-# CTC Gallery 🎨
+# CTC Masonry Gallery 🎨
 
 **Contributors:** UjW0L  
 **Donate link:** [Support the Plugin 🙏](https://www.patreon.com/ujw0l/membership)  
