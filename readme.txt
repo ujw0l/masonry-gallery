@@ -1,65 +1,79 @@
-=== CTC Gallery ===
-Contributors: UjW0L
-Donate link: https://www.patreon.com/ujw0l/membership
-Tags: block, gallery, masonry, overlay, image-album
-Requires at least: 5.7.2
-Tested up to: 6.6
-Requires PHP: 7.4.9
-Stable tag: 2.7.0
-License: GPL V2
+# CTC Gallery 🎨
 
-WordPress plugin to create masonry image gallery
+**Contributors:** UjW0L  
+**Donate link:** [Support the Plugin 🙏](https://www.patreon.com/ujw0l/membership)  
+**Tags:** block, gallery, masonry, overlay, image-album  
+**Requires at least:** 5.7.2  
+**Tested up to:** 6.6  
+**Requires PHP:** 7.4.9  
+**Stable tag:** 2.7.0  
+**License:** GPL V2
 
-== Description ==
-Plugins lets you create a Masonry Image gallery with Gutenberg Block. And view image in modal window. Now with ability to apply box shadow effect and zoom to the image, 
+## Description
+
+CTC Gallery is a versatile WordPress plugin that lets you create stunning Masonry image galleries using the Gutenberg Block editor. Showcase your images in a dynamic grid layout and enhance their presentation with customizable options.
+
+### Key Features:
+- **Masonry Layout 📸:** Create beautiful image galleries with a masonry grid.
+- **Modal View 🔍:** View images in a sleek modal window for a polished look.
+- **Customization Options ✨:** Apply box shadow effects, zoom on hover, and display images in an overlay.
+- **Flexible Settings ⚙️:** Adjust image size and gutter width with range controls in the block settings.
 
 ### What's Next
-Checkout out my other projects for WordPress 
-	
-[Carousel Block](https://5973410813512.gumroad.com/l/lwducfe) - Create Image carousel With Block
-	
-[CT Commerce Lite](https://wordpress.org/plugins/ctc-lite/) - Block based ecommerce plugin
 
+Explore my other WordPress projects:
 
-== Installation ==
+- [Carousel Block 🎠](https://5973410813512.gumroad.com/l/lwducfe) - Create an image carousel with a block.
+- [CT Commerce Lite 🛒](https://wordpress.org/plugins/ctc-lite/) - A block-based eCommerce plugin.
 
-This section describes how to install the plugin and get it working.
+## Installation
 
-e.g.
+To install and activate the CTC Gallery plugin, follow these steps:
 
-1. Upload the plugin files to the `/wp-content/plugins/masonry-gallery` directory, or install the plugin through the WordPress plugins screen directly.
-2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Go to Post screen look for Masonry gallery block on gutenberg section
-4. Add the block
-5. Adjust Image size and Gutter width with Range control on block setting  
+1. Upload the plugin files to the `/wp-content/plugins/ctc-gallery` directory, or install the plugin through the WordPress plugins screen directly.
+2. Activate the plugin through the 'Plugins' screen in WordPress.
+3. Go to the Post screen and look for the Masonry Gallery block in the Gutenberg section.
+4. Add the block to your post or page.
+5. Customize the image size and gutter width using the range control in the block settings.
 
-== Screenshots ==
-1. Gutenberg Block
-2. Block Setting
-3. Frontend display
-4. Image in overlay
+## Screenshots
 
+1. Gutenberg Block Interface 🖼️
+2. Block Settings Panel ⚙️
+3. Frontend Display Example 🌟
+4. Image Overlay View 🖌️
 
-== Changelog ==
+## Changelog
 
-=1.0.0=
-*First Stable version
+### 2.7.0
+- Enhanced gallery display on image load 📥
 
-=2.0.0=
-*CTC Overlay viewer added
-*Gutter width option added
+### 2.6.0
+- Added image box shadow background effect 🖍️
+- Added optional image enlargement on hover 🔍
+- Added optional display of images in overlay 🖼️
 
-=2.5.0=
-*JSX Support for Development
-*Minified version of JavaScript
+### 2.5.1
+- Minor bug fixes 🐞
 
-=2.5.1=
-*Minor bux fixes
+### 2.5.0
+- Added JSX support for development 🛠️
+- Minified version of JavaScript included ⚡
 
-=2.6.0=
-*Image box shadow background effect
-*Optional image enlarge on hover
-*Optional display images galley in overlay 
+### 2.0.0
+- Introduced CTC Overlay viewer 🎥
+- Added gutter width adjustment option 📏
 
-=2.7.0=
-*Display gallery on Image load
+### 1.0.0
+- Initial stable release 🚀
+
+## Frequently Asked Questions
+
+**Q: How do I adjust the gutter width between images?**  
+A: You can adjust the gutter width in the block settings under the Gutenberg editor.
+
+**Q: Can I customize the modal view?**  
+A: Yes, you can customize the modal view by configuring the settings in the block options.
+
+**Q: Where can I get support?**  
+A: For support or to report issues, please visit the [Support Forum](https://wordpress.org/support/plugin/ctc-gallery).
