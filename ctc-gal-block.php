@@ -1,7 +1,7 @@
 <?php
 /**
 *
- *Plugin Name:CTC Gallery
+ *Plugin Name:CTC Masonry Gallery
  *Plugin URI:https://github.com/ujw0l/masonry-gallery
  *Description: Masonry image gallery Gutenberg block for WordPress
  *Version: 2.7.0

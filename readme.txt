@@ -23,7 +23,9 @@ CTC Gallery is a versatile WordPress plugin that lets you create stunning Masonr
 
 Explore my other WordPress projects:
 
-- [Carousel Block 🎠](https://5973410813512.gumroad.com/l/lwducfe) - Create an image carousel with a block.
+- [PicTweak 📸](https://payhip.com/b/wVhLj) - Capture, edit, and upload stunning photos with ease with webcam, all within WordPress.”
+- [CTC Gallery 🎨](https://payhip.com/b/MtyGn) - Four different types of Galleries in same plugin.
+- [Carousel Block 🎠](https://payhip.com/b/TEt7Z) - Create an image carousel with a block.
 - [CT Commerce Lite 🛒](https://wordpress.org/plugins/ctc-lite/) - A block-based eCommerce plugin.
 
 ## Installation
