@@ -38,7 +38,7 @@ registerBlockType( metadata.name, {
 	keywords: [__('Masonry galllery', 'ctc-gal'), __('masonry gallery', 'ctc-gal'), __("Gallery",'ctc-gal'), __("Collage",'ctc-gal')],
 	
 	attributes: {
-		        brkWidth: { type: "Number", default: 48 },
+		        brkWidth: { type: "Number", default: 40 },
 		        gallery: { type: "Array", default: [] },
 		        mediaIds: { type: "Array", default: [] },
 		        gutWidth:{type:"Number", default:15},
