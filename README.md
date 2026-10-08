@@ -1,17 +1,15 @@
-=== CTC Masonry Gallery ===
-Contributors: ujw0l
-Donate link: https://www.paypal.com/donate/?hosted_button_id=VUJCB99MC6R48
-Tags: block, gallery, masonry, overlay, image-album
-Requires at least: 5.7.2
-Tested up to: 6.7.10
-Requires PHP: 7.4.9
-Stable tag: 2.8.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# CTC Masonry Gallery 🎨
 
-Create refined masonry galleries in Gutenberg with hover enlargement, custom shadows, and a full-screen image viewer.
+**Contributors:** UjW0L
+**Donate link:** https://www.paypal.com/donate/?hosted_button_id=VUJCB99MC6R48
+**Tags:** block, gallery, masonry, overlay, image-album
+**Requires at least:** 5.7.2
+**Tested up to:** 6.7.10
+**Requires PHP:** 7.4.9
+**Stable tag:** 2.8.0
+**License:** GPL V2
 
-== Description ==
+## Description
 
 CTC Masonry Gallery creates flowing image collections in the WordPress Gutenberg editor. Version 2.8.0 brings a refined editor, a polished image viewer, and more reliable image loading while preserving the existing gallery features and saved block markup.
 
@@ -36,7 +34,7 @@ Explore my other WordPress projects:
 - [Gravity Forms Add-ons](https://gfaddon.ujwolb.com.np/)
 - [CT Commerce Lite 🛒](https://wordpress.org/plugins/ctc-lite/) - A block-based eCommerce plugin.
 
-== Installation ==
+## Installation
 
 To install and activate CTC Masonry Gallery:
 
@@ -50,7 +48,7 @@ To install and activate CTC Masonry Gallery:
 
 To update an existing installation, replace the plugin files with the new release. Existing galleries keep their images and settings.
 
-== Screenshots ==
+## Screenshots
 
 1. Refined Gutenberg gallery editor with a live masonry preview and collection details.
 2. Grouped Layout, Interaction, and Appearance settings alongside the gallery preview.
@@ -58,7 +56,7 @@ To update an existing installation, replace the plugin files with the new releas
 4. The full-screen image viewer with thumbnails, captions, navigation, zoom, and slideshow controls.
 5. The image-selection screen for starting a new collection.
 
-== Changelog ==
+## Changelog
 
 ### 2.8.0
 
@@ -94,7 +92,7 @@ To update an existing installation, replace the plugin files with the new releas
 ### 1.0.0
 - Initial stable release 🚀
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
 **Q: How do I adjust the gutter width between images?**
 A: You can adjust the gutter width in the block settings under the Gutenberg editor.
@@ -104,7 +102,7 @@ A: Enable **Open in image viewer** in the Interaction panel. The viewer includes
 
 **Q: Where can I get support?**
 A: For support or to report issues, please visit the [Support Forum](https://wordpress.org/support/plugin/block-for-masonry-gallery).
-== Development ==
+## Development
 
 ```sh
 npm ci

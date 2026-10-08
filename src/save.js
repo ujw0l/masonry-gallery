@@ -11,20 +11,42 @@ import { useBlockProps } from '@wordpress/block-editor';
  * be combined into the final markup, which is then serialized by the block
  * editor into `post_content`.
  *
+ * @param {Object} root0            Block props.
+ * @param {Object} root0.attributes Block attributes.
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
  *
- * @return {WPElement} Element to render.
+ * @return {JSX.Element} Element to render.
  */
-export default function save({attributes}) {
+export default function save( { attributes } ) {
 	return (
 		<div { ...useBlockProps.save() }>
-			{0 < attributes.gallery.length && <div style={{opacity:'0'}} data-gut-wd={attributes. gutWidth} className= {`mas-gal-gallery ${attributes.overlayClass}`} id= {`mas-div-${attributes.clntId}` } > 
-			{
-			    attributes.gallery.map((x,i)=><img   key={i} className={ `mas-img-${attributes.clntId} ${attributes.zoomOnHoverClass}`} style={ { boxShadow:`${attributes.boxShadWd}px ${attributes.boxShadWd}px ${attributes.boxShadWd/2}px ${attributes.shadowCol}`, width : `${attributes.brkWidth}% `} } title={ x.caption} src= {x.url}  /> )
-			}
-			</div> 
-			}
-
+			{ 0 < attributes.gallery.length && (
+				<div
+					style={ { opacity: '0' } }
+					data-gut-wd={ attributes.gutWidth }
+					className={ `mas-gal-gallery ${ attributes.overlayClass }` }
+					id={ `mas-div-${ attributes.clntId }` }
+				>
+					{ attributes.gallery.map( ( x, i ) => (
+						// Preserve legacy markup; the frontend adds accessible image names.
+						// eslint-disable-next-line jsx-a11y/alt-text
+						<img
+							key={ i }
+							className={ `mas-img-${ attributes.clntId } ${ attributes.zoomOnHoverClass }` }
+							style={ {
+								boxShadow: `${ attributes.boxShadWd }px ${
+									attributes.boxShadWd
+								}px ${ attributes.boxShadWd / 2 }px ${
+									attributes.shadowCol
+								}`,
+								width: `${ attributes.brkWidth }% `,
+							} }
+							title={ x.caption }
+							src={ x.url }
+						/>
+					) ) }
+				</div>
+			) }
 		</div>
 	);
 }

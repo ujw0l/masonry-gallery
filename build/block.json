@@ -2,11 +2,11 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "masonry-gallery/ctc-gal-block",
-  "version": "2.5.0",
-  "title": "CTC Masonry Gallery ",
+  "version": "2.8.0",
+  "title": "CTC Masonry Gallery",
   "category": "media",
   "icon": "layout",
-  "description": "Create a Masonry Image gallery with Gutenberg block",
+  "description": "Create a flowing masonry image gallery with hover enlargement and an optional full-screen viewer.",
   "example": {},
   "supports": {
     "html": false
@@ -15,5 +15,5 @@
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "viewScript": "file:/frontend.js"
+  "viewScript": "file:./frontend.js"
 }

@@ -1,33 +1,216 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.wp-block-masonry-gallery-ctc-gal-block {
 
-.wp-block-create-block-ctc-gal-block {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	.ctc-gal-gallery,
+	.mas-gal-gallery {
+		position: relative;
+		isolation: isolate;
+		min-height: 1px;
+	}
+
+	.ctc-gal-gallery > img,
+	.mas-gal-gallery > img {
+		display: block;
+		max-width: 100%;
+		margin: 0;
+		border-radius: 10px;
+		vertical-align: middle;
+		transition:
+			transform 300ms ease,
+			filter 300ms ease;
+	}
+
+	img.ctc-gal-zoom-on-hover:hover {
+		z-index: 10;
+		transform: scale(2);
+		filter: drop-shadow(0 12px 20px #18231d26);
+	}
+
+	.ctc-gal-overlay > img {
+		cursor: zoom-in;
+	}
+
+	.ctc-gal-overlay > img:hover {
+		filter: brightness(1.04);
+	}
+
+	.ctc-gal-overlay > img:focus-visible {
+		outline: 3px solid #315f4d;
+		outline-offset: 4px;
+	}
 }
 
+// The viewer library writes inline styles; scoped overrides keep all controls.
+#gallery-overlay.ctc-premium-viewer {
+	background: #101714f5 !important;
+	backdrop-filter: blur(18px);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	box-sizing: border-box;
 
-@keyframes zoomOnHover {
-	from {
-		transform: scale(1,1);
-		
+	#loaded-img {
+		position: absolute;
+		inset: 0;
+		margin: auto !important;
+		border-radius: 8px;
+		object-fit: contain;
+		box-shadow: 0 24px 80px #0006;
 	}
-	to {
-		transform: scale(2,2);
-		
-	}
-  }
 
-img.ctc-gal-zoom-on-hover:hover{
- 
-	position: absolute;
-	z-index: 500000;
-	transition: width 1.5s, height 1.5s;
-	animation: zoomOnHover 1.5s linear;
-	transform: scale(2,2);
-  }
+	#overlay-close-btn,
+	#toolbar-div > div {
+		display: grid !important;
+		place-items: center;
+		width: 44px !important;
+		height: 44px !important;
+		margin: 0 !important;
+		border: 1px solid #ffffff24;
+		border-radius: 12px !important;
+		background: #ffffff0d !important;
+		color: #fff !important;
+		font: 22px/1 sans-serif !important;
+		text-shadow: none !important;
+		cursor: pointer;
+		transition: background 180ms ease;
+		box-sizing: border-box;
+	}
+
+	#overlay-close-btn {
+		position: absolute;
+		top: 20px;
+		right: 20px !important;
+	}
+
+	#overlay-close-btn:hover,
+	#toolbar-div > div:hover {
+		background: #ffffff24 !important;
+	}
+
+	[role="button"]:focus-visible {
+		outline: 2px solid #c6ddcf;
+		outline-offset: 3px;
+	}
+
+	#toolbar-div {
+		display: flex !important;
+		gap: 6px;
+		top: auto !important;
+		bottom: 22px;
+		right: 50% !important;
+		transform: translateX(50%);
+		z-index: 200000;
+		padding: 8px;
+		border: 1px solid #ffffff1a;
+		border-radius: 18px;
+		background: #17211df2;
+	}
+
+	#gal-sidebar {
+		position: absolute;
+		top: 80px;
+		bottom: 100px;
+		left: 16px !important;
+		width: 60px !important;
+		height: auto !important;
+		padding: 0 !important;
+		background: transparent !important;
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		overflow-y: auto;
+	}
+
+	#gal-sidebar .img-preview {
+		width: 54px !important;
+		min-height: 54px;
+		height: 54px !important;
+		flex-shrink: 0;
+		border: 1px solid #ffffff38 !important;
+		border-radius: 8px !important;
+		background-color: #ffffff0d !important;
+		background-size: cover !important;
+		opacity: 0.5;
+	}
+
+	#gal-sidebar .img-preview[aria-current="true"] {
+		border: 2px solid #c6ddcf !important;
+		opacity: 1;
+	}
+
+	#gal-sidebar .img-preview:hover {
+		opacity: 1;
+	}
+
+	#img-title-info {
+		left: 100px !important;
+		right: 100px;
+		bottom: 102px !important;
+		width: auto !important;
+		height: auto !important;
+		max-height: 48px;
+		overflow: auto !important;
+		font-size: 13px !important;
+		line-height: 1.6;
+		color: #e3eae5 !important;
+	}
+
+	#image-loading-main {
+		position: absolute !important;
+		left: 50% !important;
+		top: 50% !important;
+		transform: translate(-50%, -50%);
+		font-size: 13px !important;
+		letter-spacing: 1px;
+	}
+
+	@media (max-width: 600px) {
+
+		#overlay-close-btn {
+			top: 12px;
+			right: 12px !important;
+		}
+
+		#gal-sidebar {
+			top: 16px;
+			bottom: auto;
+			left: 16px !important;
+			right: 72px;
+			width: auto !important;
+			height: 48px !important;
+			flex-direction: row;
+			overflow-x: auto;
+			overflow-y: hidden;
+			gap: 8px;
+		}
+
+		#gal-sidebar .img-preview {
+			width: 42px !important;
+			min-height: 42px;
+			height: 42px !important;
+		}
+
+		#toolbar-div {
+			gap: 2px;
+			padding: 5px;
+			bottom: 16px;
+		}
+
+		#toolbar-div > div {
+			width: 38px !important;
+			height: 44px !important;
+		}
+
+		#img-title-info {
+			left: 20px !important;
+			right: 20px;
+			bottom: 86px !important;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.wp-block-masonry-gallery-ctc-gal-block img,
+	#gallery-overlay.ctc-premium-viewer [role="button"] {
+		transition: none !important;
+	}
+}
