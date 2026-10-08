@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Masonry Gallery</title>
+  <desc id="desc">Four staggered image tiles in ivory, sage and warm gold on a forest green background.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3d705b"/>
+      <stop offset="1" stop-color="#183d30"/>
+    </linearGradient>
+    <linearGradient id="ivory" x1="40" y1="40" x2="116" y2="156" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#e7eddb"/>
+    </linearGradient>
+    <linearGradient id="sage" x1="140" y1="120" x2="216" y2="216" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#dbe9cf"/>
+      <stop offset="1" stop-color="#b7d0ac"/>
+    </linearGradient>
+    <clipPath id="portrait"><rect x="40" y="40" width="76" height="116" rx="12"/></clipPath>
+    <clipPath id="landscape"><rect x="140" y="120" width="76" height="96" rx="12"/></clipPath>
+  </defs>
+  <path fill="url(#background)" d="M0 0h256v256H0z"/>
+  <circle cx="24" cy="0" r="200" fill="#fff" opacity=".035"/>
+  <g fill="#102e23" opacity=".28" transform="translate(0 6)">
+    <rect x="40" y="40" width="76" height="116" rx="12"/>
+    <rect x="140" y="40" width="76" height="56" rx="12"/>
+    <rect x="40" y="180" width="76" height="36" rx="12"/>
+    <rect x="140" y="120" width="76" height="96" rx="12"/>
+  </g>
+  <rect x="40" y="40" width="76" height="116" rx="12" fill="url(#ivory)"/>
+  <g clip-path="url(#portrait)">
+    <circle cx="88" cy="70" r="13" fill="#d6ae70"/>
+    <path d="M28 146 65 94a5 5 0 0 1 8 0l46 62H28z" fill="#a4bba0"/>
+    <path d="m62 156 35-42a5 5 0 0 1 8 0l29 42H62z" fill="#688e73"/>
+  </g>
+  <rect x="140" y="40" width="76" height="56" rx="12" fill="#d9e4cd"/>
+  <rect x="40" y="180" width="76" height="36" rx="12" fill="#d6ae70"/>
+  <rect x="140" y="120" width="76" height="96" rx="12" fill="url(#sage)"/>
+  <g clip-path="url(#landscape)">
+    <path d="M130 210c26-46 62-64 96-66v82h-96z" fill="#84a789"/>
+    <path d="M132 230c20-35 50-51 96-47v47z" fill="#547c60"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-opacity=".2">
+    <rect x="40.5" y="40.5" width="75" height="115" rx="11.5"/>
+    <rect x="140.5" y="40.5" width="75" height="55" rx="11.5"/>
+    <rect x="40.5" y="180.5" width="75" height="35" rx="11.5"/>
+    <rect x="140.5" y="120.5" width="75" height="95" rx="11.5"/>
+  </g>
+</svg>

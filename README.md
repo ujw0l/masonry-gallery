@@ -112,3 +112,7 @@ npm run lint:css
 ```
 
 The `src/` directory contains the editable source. Commit the generated `build/` assets with source changes so the plugin can be installed without Node.js. The webpack adapter in `tooling/` exposes the classes from the existing `js-masonry` and `ctc-gallery-viewer` packages; both dependencies and all existing npm scripts are retained.
+
+## WordPress.org listing assets
+
+The `assets/` directory contains the masonry icon as an editable SVG and 128×128 and 256×256 PNG files. The directory listing uses a static icon. Copy these three icon files and the five root-level `screenshot-*.png` files to the plugin's top-level SVN `assets/` directory, alongside `trunk/` and `tags/`. See the [WordPress.org asset requirements](https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/) for publishing details.
